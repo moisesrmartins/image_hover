@@ -3,6 +3,16 @@ body {
     margin-bottom: 25rem;
 }
 
+h1 {
+    background-color: rgba(140, 16, 156, 0.5);
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    background-color: rgb(14, 127, 192, 0.5);
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -15,19 +25,59 @@ body {
 
 .img-wrapper > img {
     display: block;
-    width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     object-position: center;
+    margin: 0 auto;
 }
 
 .img-wrapper > .content {
     position: absolute;
     inset: 0;
-    font-size: 2rem;
-    padding: 1rem;
-    background: #d6df34;
-    display: flex;
+    font-size: 20px;
+    background: rgba(255, 255, 255, 0.4);
+    display:flex;
+    align-items: end;
     justify-content: center;
-    align-items: center;
+} 
+
+.vidro-rosa{
+    background-color: rgba(140, 16, 156, 0.5);
+    color:#000;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.vidro-azul{
+    background-color: rgb(14, 127, 192, 0.5);
+    color:#000;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.img-wrapper > img,
+.img-wrapper > .content {
+    transition: 100ms ease-in-out;
+}
+
+.img-wrapper:hover > img.blur {
+    filter: blur(5px);
+}
+
+.img-wrapper:hover > img.gray {
+    filter: grayscale(1);
+} 
+
+.img-wrapper:hover > img.zoom {
+    transform: scale(1.1);
+}
+
+.img-wrapper > .content .fade {
+    opacity: 0;
+}
+
+.img-wrapper:hover > .content .fade {
+    opacity: 1;
 }
